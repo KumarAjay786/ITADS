@@ -1,0 +1,2160 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- title -->
+    <title>Pragathi IT Ads</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+    <meta name="author" content="Pragathi">
+    <!-- description -->
+    <meta name="description" content="Pragathi IT Ads, Pragathi HR Consultancy">
+    <!-- keywords -->
+    <meta name="keywords"
+        content="Pragathi IT Ads, Pragathi HR Consultancy, Advertising & Branding Services, Graphic Design, IT Services, Promotion & Marketing, Printing Services, Corporate Gifting, Financial Service, Accounting & Audit Service, HR Consultency, Liaison Services, Education Consultency Service">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/images/favicon.png">
+    <link rel="apple-touch-icon" href="/static/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/apple-touch-icon-114x114.png">
+    <!-- animation -->
+    <link rel="stylesheet" href="/static/css/animate.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <!-- et line icon -->
+    <link rel="stylesheet" href="/static/css/et-line-icons.css" />
+    <!-- font-awesome icon -->
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+    <!-- themify icon -->
+    <link rel="stylesheet" href="/static/css/themify-icons.css">
+    <!-- swiper carousel -->
+    <link rel="stylesheet" href="/static/css/swiper.min.css">
+    <!-- justified gallery  -->
+    <link rel="stylesheet" href="/static/css/justified-gallery.min.css">
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="/static/css/magnific-popup.css" />
+    <!-- revolution slider -->
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/settings.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/navigation.css">
+    <!-- bootsnav -->
+    <link rel="stylesheet" href="/static/css/bootsnav.css">
+    <!-- style -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+
+    <style>
+        /* ===================== Thank You Popup Styling ===================== */
+        .thank-you-popup {
+            width: 300px;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: none;
+            z-index: 9999;
+        }
+
+        /* ===================== Popup Form Styling (Unified, Modern) ===================== */
+        .form-container {
+            max-width: 800px;
+            width: 90vw;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(0, 0, 0, 0.13);
+            padding: 2.5rem 2rem 2rem 2rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            transition: box-shadow 0.2s;
+            min-height: 1px;
+            height: auto;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+        }
+
+        .form-container h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: #d40b0b;
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-container .close-btn {
+            font-size: 1.3rem;
+            color: #e53935;
+            background: #fbe9e7;
+            border-radius: 50%;
+            width: 2.1rem;
+            height: 2.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .form-container .close-btn:hover {
+            background: #ffcdd2;
+        }
+
+        .form-container p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .form-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.1rem;
+        }
+
+        .form-grid>* {
+            flex: 1 1 45%;
+            min-width: 0;
+        }
+
+        .form-grid .full-width {
+            flex-basis: 100%;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 0rem 1rem;
+            border: 1.5px solid #c5cae9;
+            border-radius: 8px;
+            font-size: 1.08rem;
+            background: #f8fafc;
+            margin-bottom: 0;
+            transition: border 0.2s;
+            min-height: 35px;
+        }
+
+        .form-container input:focus,
+        .form-container select:focus,
+        .form-container textarea:focus {
+            border-color: #3949ab;
+            outline: none;
+            background: #fff;
+        }
+
+        .form-container button[type="submit"] {
+            background: linear-gradient(90deg, #3949ab 60%, #00bcd4 100%);
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            padding: 0.95rem 0;
+            margin-top: 0.2rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(41, 73, 171, 0.08);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+
+        .form-container button[type="submit"]:hover {
+            background: linear-gradient(90deg, #d40000 60%, hsl(333, 94%, 45%) 100%);
+            box-shadow: 0 4px 16px rgba(41, 73, 171, 0.13);
+        }
+
+        .form-container textarea {
+            min-height: 70px;
+            resize: vertical;
+        }
+
+        @media (max-width: 900px) {
+            .form-container {
+                max-width: 98vw;
+                padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+            }
+
+            .form-grid {
+                gap: 0.7rem;
+            }
+
+            .form-container h1 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* ===================== General Body Styling ===================== */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* ===================== Fixed Left Button Group ===================== */
+        .left-static-buttons {
+            position: fixed;
+            top: 50%;
+            left: -14px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 77777777;
+        }
+
+        /* ===================== Blinking Button Styling ===================== */
+        .blink-button {
+            padding: 10px 20px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 800;
+            animation: blink-animation 1s infinite;
+        }
+
+        /* Blinking Button: Work Enquiry (Gold color) */
+        .blink-button.blink-red {
+            background-color: hsl(40, 95%, 50%);
+        }
+
+        /* Blinking Button: Franchise Enquiry (Green color) */
+        .blink-button.blink-green {
+            background-color: #ec0404;
+        }
+
+        .blink-button.blink-green:hover {
+            background-color: hsl(0, 90%, 47%);
+        }
+
+        /* Blinking animation for buttons */
+        @keyframes blink-animation {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* ===================== Close Button Styling ===================== */
+        .close-btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ccc;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            text-align: center;
+            width: 25px;
+            height: 25px;
+        }
+
+        .close-btn:hover {
+            background-color: #999;
+
+
+        }
+
+        #workForm {
+            max-width: 500px;
+            /* Optional: Set a maximum width for the form */
+            margin: auto;
+            /* Center the form */
+            padding: 10px;
+            /* Reduce padding */
+            border: 1px solid #ccc;
+            /* Optional: Add a border for clarity */
+            border-radius: 5px;
+            /* Optional: Rounded corners */
+        }
+
+        #workForm .form-grid {
+            display: grid;
+            gap: 5px;
+            /* Minimize spacing between form elements */
+        }
+
+        #workForm input[type="text"],
+        #workForm input[type="tel"],
+        #workForm input[type="email"],
+        #workForm select {
+            height: 30px;
+            /* Reduce input height */
+            font-size: 14px;
+            /* Adjust font size */
+            padding: 5px;
+            /* Reduce internal padding */
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin: 2px 0;
+            /* Reduce spacing around input fields */
+        }
+
+        #workForm select {
+            height: auto;
+            /* Allow for different select heights */
+        }
+
+        #workForm input::placeholder {
+            font-size: 12px;
+            /* Adjust placeholder font size */
+        }
+
+        #workForm button {
+            height: 35px;
+            /* Reduce button height */
+            font-size: 14px;
+            /* Adjust button font size */
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: #007BFF;
+            /* Customize button color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 2px 0;
+            /* Reduce spacing around the button */
+        }
+
+        #workForm button:hover {
+            background-color: #0056b3;
+            /* Darker button on hover */
+        }
+
+        #workForm1 {
+            max-width: 500px;
+            /* Optional: Set a maximum width for the form */
+            margin: auto;
+            /* Center the form */
+            padding: 10px;
+            /* Reduce padding */
+            border: 1px solid #ccc;
+            /* Optional: Add a border for clarity */
+            border-radius: 5px;
+            /* Optional: Rounded corners */
+        }
+
+        #workForm1 .form-grid {
+            display: grid;
+            gap: 5px;
+            /* Minimize spacing between form elements */
+        }
+
+        #workForm1 input[type="text"],
+        #workForm1 input[type="tel"],
+        #workForm1 input[type="email"],
+        #workForm1 select {
+            height: 30px;
+            /* Reduce input height */
+            font-size: 14px;
+            /* Adjust font size */
+            padding: 5px;
+            /* Reduce internal padding */
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin: 2px 0;
+            /* Reduce spacing around input fields */
+        }
+
+        #workForm1 select {
+            height: auto;
+            /* Allow for different select heights */
+        }
+
+        #workForm1 input::placeholder {
+            font-size: 12px;
+            /* Adjust placeholder font size */
+        }
+
+        #workForm1 button {
+            height: 35px;
+            /* Reduce button height */
+            font-size: 14px;
+            /* Adjust button font size */
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: #007BFF;
+            /* Customize button color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 2px 0;
+            /* Reduce spacing around the button */
+        }
+
+        #workForm1 button:hover {
+            background-color: #0056b3;
+            /* Darker button on hover */
+        }
+
+        #workForm1 {
+            max-width: 500px;
+            /* Optional: Set a maximum width for the form */
+            margin: auto;
+            /* Center the form */
+            padding: 10px;
+            /* Reduce padding */
+            border: 1px solid #ccc;
+            /* Optional: Add a border for clarity */
+            border-radius: 5px;
+            /* Optional: Rounded corners */
+        }
+
+        #workForm1 .form-grid {
+            display: grid;
+            gap: 10px;
+            /* Reduce spacing between form elements */
+        }
+
+        #workForm1 input[type="text"],
+        #workForm1 input[type="tel"],
+        #workForm1 input[type="email"],
+        #workForm1 select {
+            height: 30px;
+            /* Reduce input height */
+            font-size: 14px;
+            /* Adjust font size */
+            padding: 5px;
+            /* Reduce internal padding */
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        #workForm1 select {
+            height: auto;
+            /* Allow for different select heights */
+        }
+
+        #workForm1 input::placeholder {
+            font-size: 12px;
+            /* Adjust placeholder font size */
+        }
+
+        #workForm1 button {
+            height: 35px;
+            /* Reduce button height */
+            font-size: 14px;
+            /* Adjust button font size */
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: #007BFF;
+            /* Customize button color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #workForm button:hover {
+            background-color: #0056b3;
+            /* Darker button on hover */
+        }
+
+
+        #thankYouPopup {
+            display: none;
+            position: fixed;
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            width: 450px;
+            z-index: 10000;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #thankYouPopup .popup-header {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px 8px 0 0;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #thankYouPopup .popup-content {
+            padding: 20px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <header class="header-with-topbar fixed-topbar">
+        <!-- topbar -->
+        <div class="top-header-area bg-black padding-10px-tb">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div
+                        class="col-md-6 text-sentencecase alt-font d-flex align-items-center justify-content-center justify-content-md-start">
+                        <a href="tel:1234567890" class="text-link-white-2 line-height-normal"
+                            title="Call us 123-456-7890">Call Us +91 88612 15361</a>
+                        <div
+                            class="separator-line-verticle-extra-small bg-dark-gray display-inline-block margin-two-half-lr position-relative vertical-align-middle">
+                        </div>
+                        <a href="mailto:info@pragathiitads.com" class="text-link-white-2 line-height-normal"
+                            title="info@pragathiitads.com">info@pragathiitads.com</a>
+                    </div>
+                    <div class="col-md-6 d-none d-md-flex align-items-center justify-content-end">
+                        <div class="icon-social-very-small display-inline-block line-height-normal">
+                            <a href="https://www.facebook.com/pragathiitads" title="Facebook" target="_blank"
+                                class="text-link-white-2"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+
+                            <a href="https://www.instagram.com/pragathiitads" title="instagram" target="_blank"
+                                class="text-link-white-2"><i class="fab fa-instagram"></i></a>
+
+                            <a href="https://x.com/pragathiitads" title="Twitter" target="_blank"
+                                class="text-link-white-2"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/pragathi-itads" title="Linked In" target="_blank"
+                                class="text-link-white-2"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com/@pragathiitads" title="Youtube" target="_blank"
+                                class="text-link-white-2"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <div
+                            class="separator-line-verticle-extra-small bg-dark-gray display-inline-block margin-two-half-lr position-relative vertical-align-middle top-1px">
+                        </div>
+                        <div class="btn-group dropdown-style-1">
+                            <a href="login.html" class="text-link-white-2 line-height-normal"
+                                title="Group of Company">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end topbar -->
+        <!-- start navigation -->
+        <nav
+            class="navbar navbar-default bootsnav navbar-fixed-top header-light-transparent background-transparent nav-box-width navbar-expand-lg on no-full">
+            <div class="container nav-header-container">
+                <!-- start logo -->
+                <div class="col-auto pl-lg-0">
+                    <a href="index.html" title="Pragathi" class="logo"><img src="/static/images/logo.png"
+                            data-rjs="/static/images/logo@2x.png" class="logo-dark default" alt="Pragathi"><img
+                            src="/static/images/logo-white.png" data-rjs="/static/images/logo-white@2x.png"
+                            alt="Pragathi" class="logo-light"></a>
+                </div>
+                <!-- end logo -->
+                <div class="col accordion-menu pr-0 pr-md-3">
+                    <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
+                        data-target="#navbar-collapse-toggle-1" aria-expanded="false">
+                        <span class="sr-only">toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-collapse collapse justify-content-end" id="navbar-collapse-toggle-1">
+                        <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal"
+                            data-in="fadeIn" data-out="fadeOut">
+                            <!-- start menu item -->
+                            <li class="dropdown megamenu-fw">
+                            </li>
+                            <li><a href="index.html">Home</a></li>
+                            <!-- end menu item -->
+
+                            <li class="dropdown simple-dropdown active"><a href="#">About Us</a><i
+                                    class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown"
+                                    aria-hidden="true"></i>
+                                <!-- start sub menu -->
+                                <ul class="dropdown-menu animated fadeOut" role="menu" style="top: 80px;">
+                                    <li class="active"><a href="about-us.html">About Pragathi IT Ads </a></li>
+                                    <li><a href="our-vision-mission.html">Our Vision &amp; Mission</a></li>
+                                    <li><a href="our-management.html">Our Management</a></li>
+                                    <li><a href="our-clients.html">Our Clients</a></li>
+                                    <li><a href="career-us.html">Career Us</a></li>
+                                    <li><a href="/static/images/img/pragathi-profile.pdf" target="new">Download Company
+                                            Profile</a></li>
+
+                                </ul>
+                            </li>
+                            <!-- end menu item -->
+
+                            <li class="dropdown simple-dropdown"><a href="#">Our Services </a><i
+                                    class="fas fa-angle-down dropdown-toggle" data-toggle="dropdown"
+                                    aria-hidden="true"></i>
+                                <!-- start sub menu -->
+                                <ul class="dropdown-menu animated" role="menu" style="top: 80px;">
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
+                                            href="#">Advertising &amp; Branding <i class="fas fa-angle-right"></i></a>
+                                        <ul class="dropdown-menu animated">
+                                            <li><a href="bellow-the-line.html">Bellow the Line</a></li>
+                                            <li><a href="branding.html">Branding</a></li>
+                                            <li><a href="broadcasting-management.html">Broadcasting Management</a></li>
+                                            <li><a href="print-media.html">Print Media</a></li>
+                                            <li><a href="radio-jungle.html">Radio Jungle</a></li>
+                                            <li><a href="public-relation.html">Public Relation</a></li>
+                                            <li><a href="outdoor-branding.html">Outdoor Branding</a></li>
+                                            <li><a href="events-exhibitions.html">Events &amp; Exhibitions</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
+                                            href="#">Graphic Design <i class="fas fa-angle-right"></i></a>
+                                        <ul class="dropdown-menu animated">
+                                            <li><a href="2d-design.html">2D Design</a></li>
+                                            <li><a href="3d-design.html">3D Design</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">IT
+                                            Services <i class="fas fa-angle-right"></i></a>
+                                        <ul class="dropdown-menu animated">
+                                            <li><a href="web-solutions.html">Web Solutions</a></li>
+                                            <li><a href="app-development.html">App Development</a></li>
+                                            <li><a href="software-development.html">Software Development</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
+                                            href="#">Promotion &amp; Marketing <i class="fas fa-angle-right"></i></a>
+                                        <ul class="dropdown-menu animated">
+                                            <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                                            <li><a href="mobile-promotions.html">Mobile Promotions</a></li>
+                                            <li><a href="social-media-marketing.html">Social Media Marketing</a></li>
+                                            <li><a href="product-activation.html">Product Activation</a></li>
+                                            <li><a href="direct-marketing.html">Direct Marketing</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="printing-services.html">Printing Services</a></li>
+                                    <li><a href="corporate-gifting.html">Corporate Gifting</a></li>
+                                </ul>
+                            </li>
+                            <!-- end menu item -->
+
+
+                            <li class="dropdown megamenu-fw">
+                            </li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <!-- end menu item -->
+                            <li class="dropdown megamenu-fw">
+                            </li>
+                            <li><a href="group-of-company.html">Group of Company</a></li>
+                            <!-- end menu item -->
+                            <!-- end menu item -->
+                            <li class="dropdown megamenu-fw">
+                            </li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <!-- start sub menu -->
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto pr-lg-0">
+                    <div class="icon-social-large display-inline-block line-height-normal">
+                        <a class="whatsapp" href="https://api.whatsapp.com/send?phone=918861215361&amp;text="
+                            target="_blank"><i class="fab fa-whatsapp" style="font-size:32px;color:green"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- end navigation -->
+    </header>
+
+
+
+
+    <div class="left-static-buttons">
+        <!-- Blinking Buttons -->
+        <button class="blink-button blink-red" onclick="showPopup('workEnquiryForm')">Work Enquiry</button>
+        <button class="blink-button blink-green" onclick="showPopup('franchiseEnquiryForm')">Franchise Enquiry</button>
+    </div>
+    <!----------------------------------- Work Enquiry Form ---------------------------->
+    <div id="workEnquiryForm" class="form-container" style="display: none;">
+        <h1> Work Enquiry <span class="close-btn" onclick="closePopup('workEnquiryForm')">X</span></h1>
+
+
+
+        <form id="workInquiryForm" method="POST">
+            <div class="row g-3">
+
+                <!-- Company Name -->
+                <div class="col-md-6">
+                    <label for="companyName" class="form-label">Company Name</label>
+                    <input type="text" id="companyName" name="company_name" class="form-control"
+                        placeholder="Enter Company Name" required>
+                </div>
+
+                <!-- Name -->
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name"
+                        required>
+                </div>
+
+                <!-- Designation -->
+                <div class="col-md-6">
+                    <label for="designation" class="form-label">Designation</label>
+                    <input type="text" id="designation" name="designation" class="form-control"
+                        placeholder="Your Role/Title" required>
+                </div>
+
+                <!-- Mobile Number -->
+                <div class="col-md-6">
+                    <label for="mobileNo" class="form-label">Mobile Number</label>
+                    <input type="tel" id="mobileNo" name="mobile_no" class="form-control"
+                        placeholder="Enter Mobile Number" required pattern="[0-9]{10}"
+                        title="Enter a valid 10-digit number">
+                </div>
+
+                <div class="col-md-12">
+                    <div class="location-group">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>Country</label>
+                                <select class="form-control country-select" name="country" required="">
+                                    <option value="">Select Country</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label>State</label>
+                                <select class="form-control state-select" name="state" required="">
+                                    <option value="">Select State</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label>District</label>
+                                <select class="form-control district-select" name="district" required="">
+                                    <option value="">Select District</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Service Selection -->
+                <div class="col-md-6">
+                    <label for="service" class="form-label">Service Looking For</label>
+                    <select id="service" name="service" class="form-select" required>
+                        <option value="" disabled selected>Select a Service</option>
+                        <option value="graphic_designing">Graphic Designing</option>
+                        <option value="web_designing">Web Designing</option>
+                        <option value="portal_development">Portal Development</option>
+                        <option value="digital_marketing">Digital Marketing</option>
+                        <option value="app_development">App Development</option>
+                        <option value="promotional_film_making">Promotional Film Making</option>
+                    </select>
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email ID</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email Address"
+                        required>
+                </div>
+
+                <!-- Description -->
+                <div class="col-12">
+                    <label for="description" class="form-label">Brief About Service</label>
+                    <textarea id="description" name="description" rows="3" class="form-control"
+                        placeholder="Write a brief about the service you need" required></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-primary px-4">Submit</button>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+    <!---------------------------------------- Franchise Enquiry Form ------------------------------------------>
+    <div id="franchiseEnquiryForm" class="form-container" style="display: none;">
+        <h1> Franchise Enquiry <span class="close-btn" onclick="closePopup('franchiseEnquiryForm')">X</span></h1>
+        <p style="font-style: italic;color: red;">You can start your IT & Ads franchise in your city without any
+            investment or manpower.</p>
+
+
+
+        <form id="franchiseForm" method="POST">
+            <div class="row g-3">
+
+                <!-- Name -->
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Full Name"
+                        required>
+                </div>
+
+                <!-- Mobile Number -->
+                <div class="col-md-6">
+                    <label for="mobileNo" class="form-label">Mobile Number</label>
+                    <input type="tel" id="mobileNo" name="mobile_no" class="form-control" placeholder="Enter Mobile No"
+                        required pattern="[0-9]{10}" title="Enter a 10-digit mobile number">
+                </div>
+
+                <!-- Email -->
+
+
+                <div class="col-md-12">
+                    <div class="location-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="Enter Email ID" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Country</label>
+                                <select class="form-control country-select" name="country" required="">
+                                    <option value="">Select Country</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label>State</label>
+                                <select class="form-control state-select" name="state" required="">
+                                    <option value="">Select State</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label>District</label>
+                                <select class="form-control district-select" name="district" required="">
+                                    <option value="">Select District</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="col-12">
+                    <label for="address" class="form-label">Full Address</label>
+                    <input type="text" id="address" name="address" class="form-control"
+                        placeholder="Enter Your Full Address" required>
+                </div>
+
+                <!-- Message -->
+                <div class="col-12">
+                    <label for="message" class="form-label">Brief About Service</label>
+                    <textarea id="message" name="message" class="form-control" rows="3"
+                        placeholder="Write a brief about the service you are looking for..." required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-primary px-4">Submit</button>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+    <div id="thankYouPopup">
+        <div class="popup-header">Notification</div>
+        <div class="popup-content">Your Inquiry Form Successfully Submitted!!!</div>
+    </div>
+
+
+
+
+
+
+    <!-- start slider section -->
+    <section class="p-0 main-slider h-100 mobile-height wow fadeIn">
+        <div class="swiper-full-screen swiper-container h-100 w-100 white-move">
+            <div class="swiper-wrapper">
+                <!-- start slider item -->
+                <div class="swiper-slide cover-background"
+                    style="background-image:url('/static/images/img/top-02.jpg');">
+                    <div class="opacity-extra-medium bg-black"></div>
+                    <div class="container position-relative full-screen">
+                        <div class="slider-typography text-center">
+                            <div class="slider-text-middle-main">
+                                <div class="slider-text-middle">
+                                    <h6
+                                        class="text-very-light-gray padding-ten-lr font-weight-300 margin-two-bottom md-margin-four-bottom sm-margin-15px-bottom">
+                                        One stop solutions for your business</h6>
+                                    <div
+                                        class="alt-font text-white-2 text-uppercase font-weight-700 letter-spacing-minus-3 title-extra-large margin-two-bottom width-60 mx-auto lg-width-80 md-margin-four-bottom sm-width-90 sm-margin-25px-bottom sm-letter-spacing-0">
+                                        One Stop Solutions</div>
+                                    <div class="btn-dual">
+                                        <a href="about-us.html"
+                                            class="btn btn-transparent-white btn-small sm-margin-two-all">About
+                                            Company</a>
+                                        <a href="contact-us.html" target="_blank"
+                                            class="btn btn-transparent-white btn-small sm-margin-two-all">Contact
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end slider item -->
+                <!-- start slider item -->
+                <div class="swiper-slide cover-background"
+                    style="background-image:url('/static/images/img/top-03.jpg');">
+                    <div class="opacity-extra-medium bg-black"></div>
+                    <div class="container position-relative full-screen">
+                        <div class="slider-typography text-center">
+                            <div class="slider-text-middle-main">
+                                <div class="slider-text-middle">
+                                    <h6
+                                        class="text-very-light-gray padding-ten-lr font-weight-300 margin-two-bottom md-margin-four-bottom sm-margin-15px-bottom">
+                                        Brand your company with support PIA branding & media team</h6>
+                                    <div
+                                        class="alt-font text-white-2 text-uppercase font-weight-700 letter-spacing-minus-3 title-extra-large margin-two-bottom width-60 mx-auto lg-width-80 md-margin-four-bottom sm-width-90 sm-margin-25px-bottom sm-letter-spacing-0">
+                                        Brand with PIA</div>
+                                    <div class="btn-dual">
+                                        <a href="our-management.html"
+                                            class="btn btn-transparent-white btn-small sm-margin-two-all">Our
+                                            Services</a>
+                                        <a href="contact-us.html" target="_blank"
+                                            class="btn btn-transparent-white btn-small sm-margin-two-all">Contact
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end slider item -->
+                <!-- start slider item -->
+                <div class="swiper-slide cover-background"
+                    style="background-image:url('/static/images/img/top-01.jpg');">
+                    <div class="opacity-extra-medium bg-black"></div>
+                    <div class="container position-relative full-screen">
+                        <div class="slider-typography text-center">
+                            <div class="slider-text-middle-main">
+                                <div class="slider-text-middle">
+                                    <h6
+                                        class="text-very-light-gray padding-ten-lr font-weight-300 margin-two-bottom md-margin-four-bottom sm-margin-15px-bottom">
+                                        we're a design studio that believe in the ideas</h6>
+                                    <div
+                                        class="alt-font text-white-2 text-uppercase font-weight-700 letter-spacing-minus-3 title-extra-large margin-two-bottom width-60 mx-auto lg-width-80 md-margin-four-bottom sm-width-90 sm-margin-25px-bottom sm-letter-spacing-0">
+                                        creative design</div>
+                                    <div class="btn-dual">
+                                        <a href="about-us.html"
+                                            class="btn btn-transparent-white btn-small sm-margin-two-all">About
+                                            Company</a>
+                                        <a href="contact-us.html" target="_blank"
+                                            class="btn btn-transparent-white btn-small sm-margin-two-all">Contact
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end slider item -->
+            </div>
+            <!-- start slider pagination -->
+            <div
+                class="swiper-pagination swiper-pagination-square swiper-pagination-white swiper-full-screen-pagination">
+            </div>
+            <div class="swiper-button-next swiper-button-black-highlight d-none"></div>
+            <div class="swiper-button-prev swiper-button-black-highlight d-none"></div>
+            <!-- end slider pagination -->
+        </div>
+    </section>
+    <!-- end slider section -->
+    <!-- start feature box section -->
+    <section class="wow fadeIn text-center text-md-left">
+        <div class="container">
+            <div class="row">
+                <!-- start feature box item -->
+                <div
+                    class="col-12 col-md-4 sm-margin-30px-bottom text-center text-md-left wow fadeInUp last-paragraph-no-margin">
+                    <div class="row m-0">
+                        <div class="col-12 col-lg-3 col-md-4 pl-0 float-left sm-no-padding-right">
+                            <i
+                                class="icon-lightbulb icon-extra-medium text-medium-gray sm-margin-15px-bottom position-relative top-minus3"></i>
+                            <span
+                                class="separator-line-verticle-large margin-ten-right bg-deep-pink align-top float-right margin-two-top d-none d-md-block"></span>
+                        </div>
+                        <div class="col-12 col-lg-9 col-md-8 md-no-padding-lr">
+                            <span class="text-medium margin-5px-bottom text-extra-dark-gray alt-font d-block">Digital
+                                Branding</span>
+                            <p class="width-90 lg-width-100">We can help you find the precise message to clearly speak
+                                to who you are as a company.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end feature box item -->
+                <!-- start feature box item -->
+                <div class="col-12 col-md-4 sm-margin-30px-bottom text-center text-md-left wow fadeInUp last-paragraph-no-margin"
+                    data-wow-delay="0.2s">
+                    <div class="row m-0">
+                        <div class="col-12 col-lg-3 col-md-4 pl-0 float-left sm-no-padding-right">
+                            <i
+                                class="icon-globe icon-extra-medium text-medium-gray sm-margin-15px-bottom position-relative top-minus3"></i>
+                            <span
+                                class="separator-line-verticle-large margin-ten-right bg-deep-pink align-top float-right margin-two-top d-none d-md-block"></span>
+                        </div>
+                        <div class="col-12 col-lg-9 col-md-8 md-no-padding-lr">
+                            <h5 class="text-medium margin-5px-bottom text-extra-dark-gray alt-font d-block">Web
+                                Interactive</h5>
+                            <p class="width-90 lg-width-100">Our websites look great, but each page has a clearly
+                                defined conversion goal.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end feature box item -->
+                <!-- start feature box item -->
+                <div class="col-12 col-md-4 text-center text-md-left wow fadeInUp last-paragraph-no-margin"
+                    data-wow-delay="0.4s">
+                    <div class="row m-0">
+                        <div class="col-12 col-lg-3 col-md-4 pl-0 float-left sm-no-padding-right">
+                            <i
+                                class="icon-paintbrush icon-extra-medium text-medium-gray sm-margin-15px-bottom position-relative top-minus3"></i>
+                            <span
+                                class="separator-line-verticle-large margin-ten-right bg-deep-pink align-top float-right margin-two-top d-none d-md-block"></span>
+                        </div>
+                        <div class="col-12 col-lg-9 col-md-8 md-no-padding-lr">
+                            <h5 class="text-medium margin-5px-bottom text-extra-dark-gray alt-font d-block">Graphic
+                                Design</h5>
+                            <p class="width-90 lg-width-100">We interlace our creative with solid marketing and branding
+                                principles. A strong brand.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end feature box item -->
+            </div>
+        </div>
+    </section>
+    <!-- end feature box section -->
+
+    <!-- start masonry portfolio section -->
+    <section class="pb-0 wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- start filter navigation -->
+                    <h6 class="text-uppercase alt-font text-extra-dark-gray font-weight-600 margin-four-bottom">Our
+                        Services</h6>
+                    <!-- end filter navigation -->
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <div class="filter-content overflow-hidden w-100">
+                    <ul class="portfolio-grid work-4col hover-option4 gutter-small">
+                        <li class="grid-sizer"></li>
+                        <!-- start portfolio item -->
+                        <li class="grid-item web branding design wow fadeInUp last-paragraph-no-margin">
+                            <a href="bellow-the-line.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-01.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Advertising
+                                                        & Branding Services</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">Branding
+                                                        & Creative Advertising</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web branding design wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.2s">
+                            <a href="2d-design.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-02.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Graphic
+                                                        Design</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">
+                                                        Stationery Design & Brochure</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item advertising branding photography wow fadeInUp wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.4s">
+                            <a href="web-solutions.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-03.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">IT
+                                                        Services</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">Website/
+                                                        App/ Software</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web advertising design wow fadeInUp wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.6s">
+                            <a href="social-media-marketing.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-04.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Promotion
+                                                        & Marketing</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">Digital/
+                                                        Social Media/ Direct Marketing</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web branding design wow fadeInUp wow fadeInUp last-paragraph-no-margin">
+                            <a href="printing-services.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-05.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Printing
+                                                        Services</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">Offset/
+                                                        Digital/ Outdoor-Indoor</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web advertising branding design photography wow fadeInUp wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.2s">
+                            <a href="corporate-gifting.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-06.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Corporate
+                                                        Gifting</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">
+                                                        Memorable Gifting Experience</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web advertising branding design photography wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.4s">
+                            <a href="financial-service.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-07.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Financial
+                                                        Service</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">
+                                                        Corporate, Private, Banking Funding/ Students Loan</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web advertising branding design photography wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.6s">
+                            <a href="accounting-audit.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-08.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Accounting
+                                                        & Audit Service</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">Auditing
+                                                        & ITR Filing/ GST Service</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+
+                        <!-- start portfolio item -->
+                        <li class="grid-item web advertising branding design photography wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.6s">
+                            <a href="hr-consultency.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-09.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">HR
+                                                        Consultancy</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">Human
+                                                        Resources Solution</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web advertising branding design photography wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.6s">
+                            <a href="liaison-services.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-10.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Liaison
+                                                        Services</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">Start-up
+                                                        Company</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web advertising branding design photography wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.6s">
+                            <a href="https://pragathiedu.com/" target="new">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-11.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Education
+                                                        Consultancy Service</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">
+                                                        Admission Guidence & Services</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                        <!-- start portfolio item -->
+                        <li class="grid-item web advertising branding design photography wow fadeInUp last-paragraph-no-margin"
+                            data-wow-delay="0.6s">
+                            <a href="broadcasting-management.html">
+                                <figure>
+                                    <div class="portfolio-img bg-extra-dark-gray"><img
+                                            src="/static/images/img/ser-12.jpg" alt="" /></div>
+                                    <figcaption>
+                                        <div class="portfolio-hover-main text-center">
+                                            <div class="portfolio-hover-box vertical-align-middle">
+                                                <div class="portfolio-hover-content position-relative">
+                                                    <div
+                                                        class="bg-deep-pink mx-auto separator-line-horrizontal-medium-light3 margin-25px-bottom">
+                                                    </div>
+                                                    <span
+                                                        class="font-weight-600 letter-spacing-1 alt-font text-white-2 text-uppercase margin-5px-bottom display-block">Photography
+                                                        & Video Editing</span>
+                                                    <p class="text-medium-gray text-uppercase text-extra-small">
+                                                        CORPORATE VIDEOS / SHORT FILMS / 2D & 3D ANIMATION</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <!-- end portfolio item -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end portfolio section -->
+    <!-- start counter section -->
+    <section class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <!-- counter box item -->
+                <div
+                    class="col-12 col-lg-3 col-md-6 md-margin-five-bottom md-padding-ten-left sm-padding-15px-left sm-margin-30px-bottom wow fadeInDown">
+                    <i class="icon-happy icon-medium float-left text-medium-gray"></i>
+                    <div class="float-left padding-nine-left">
+                        <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom timer" data-speed="2000"
+                            data-to="250">250</h5>
+                        <span class="text-small text-medium-gray text-uppercase d-block">Happy Clients</span>
+                        <div class="separator-line-horrizontal-medium-light2 bg-deep-pink d-inline-block"></div>
+                    </div>
+                </div>
+                <!-- end counter box item -->
+                <!-- counter box item -->
+                <div class="col-12 col-lg-3 col-md-6 md-margin-five-bottom md-padding-ten-left sm-padding-15px-left sm-margin-30px-bottom wow fadeInDown"
+                    data-wow-delay="0.2s">
+                    <i class="icon-layers icon-medium float-left text-medium-gray"></i>
+                    <div class="float-left padding-nine-left">
+                        <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom timer" data-speed="2000"
+                            data-to="2480">2480</h5>
+                        <span class="text-small text-medium-gray text-uppercase d-block">work Completed</span>
+                        <div class="separator-line-horrizontal-medium-light2 bg-deep-pink d-inline-block"></div>
+                    </div>
+                </div>
+                <!-- end counter box item -->
+                <!-- counter box item -->
+                <div class="col-12 col-lg-3 col-md-6 sm-margin-30px-bottom md-padding-ten-left sm-padding-15px-left wow fadeInDown"
+                    data-wow-delay="0.4s">
+                    <i class="icon-global icon-medium float-left text-medium-gray"></i>
+                    <div class="float-left padding-nine-left">
+                        <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom timer" data-speed="2000"
+                            data-to="132">132</h5>
+                        <span class="text-small text-medium-gray text-uppercase d-block">Award Winning</span>
+                        <div class="separator-line-horrizontal-medium-light2 bg-deep-pink d-inline-block"></div>
+                    </div>
+                </div>
+                <!-- end counter box item -->
+                <!-- counter box item -->
+                <div class="col-12 col-lg-3 col-md-6 md-padding-ten-left sm-padding-15px-left wow fadeInDown"
+                    data-wow-delay="0.6s">
+                    <i class="icon-chat icon-medium float-left text-medium-gray"></i>
+                    <div class="float-left padding-nine-left">
+                        <h5 class="text-extra-dark-gray font-weight-300 margin-three-bottom timer" data-speed="2000"
+                            data-to="8850">8850</h5>
+                        <span class="text-small text-medium-gray text-uppercase d-block">Telephonic Talk</span>
+                        <div class="separator-line-horrizontal-medium-light2 bg-deep-pink d-inline-block"></div>
+                    </div>
+                </div>
+                <!-- end counter box item -->
+            </div>
+        </div>
+    </section>
+    <!-- end counter section -->
+    <!-- start information section -->
+    <section class="py-0 bg-light-gray wow fadeIn">
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <!-- start information item -->
+                <div class="col-12 col-lg-4 p-0 image-hover-style-3 h-100 last-paragraph-no-margin bg-light-gray">
+                    <div class="feature-box-wrap">
+                        <div class="w-100 d-table position-relative cover-background small-screen sm-height-300px"
+                            style="background: url(/static/images/img/img-01.jpg)"></div>
+                        <div class="w-100 small-screen sm-height-300px d-table arrow-top">
+                            <div
+                                class="d-table-cell align-middle padding-eighteen-lr lg-padding-twelve-lr text-center md-padding-ten-lr sm-padding-seven-all">
+                                <h6
+                                    class="text-extra-dark-gray alt-font width-95 mx-auto md-width-100 sm-margin-15px-bottom">
+                                    About Pragathy Group</h6>
+                                <p
+                                    class="no-letter-spacing padding-two-lr line-height-26 sm-line-height-20 sm-no-padding-lr text-justify">
+                                    Pragathi Group is the business group functioning under the Pragathi IT Ads Pvt Ltd.
+                                    Our associate Group offering rather than IT and Advertising Service , HR Services
+                                    under the Title of Pragathi HR solution, Financial Services Under the Title of
+                                    Pragathi Financial Solution , Accounting Services...</p>
+
+                                <a href="more-pragathi.html"
+                                    class="text-uppercase alt-font text-extra-dark-gray font-weight-800 text-extra-small">Click
+                                    & More Details <i
+                                        class="fas fa-long-arrow-alt-right margin-5px-left text-deep-pink text-medium position-relative top-2"
+                                        aria-hidden="true"></i></a>
+
+                                <span
+                                    class="separator-line-horrizontal-medium-light2 bg-deep-pink d-inline-block margin-40px-top sm-margin-20px-top"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end information item -->
+                <!-- start information item -->
+                <div class="col-12 col-lg-4 p-0 image-hover-style-3 h-100 last-paragraph-no-margin bg-light-gray">
+                    <div class="feature-box-wrap md-swap-block">
+                        <div class="w-100 small-screen sm-height-300px d-table arrow-bottom">
+                            <div
+                                class="d-table-cell align-middle padding-eighteen-lr lg-padding-twelve-lr text-center md-padding-ten-lr sm-padding-seven-all">
+                                <h6
+                                    class="text-extra-dark-gray alt-font width-95 mx-auto md-width-100 sm-margin-15px-bottom">
+                                    About Pragathi Group Services</h6>
+                                <p
+                                    class="no-letter-spacing padding-two-lr line-height-26 sm-line-height-20 md-no-padding-lr text-justify">
+                                    Discover the exceptional service experience with Pragathi IT, where we offer
+                                    comprehensive solutions across IT, advertising, HR, financial, accounting, and
+                                    interior designing services. Our expert team ensures personalized and efficient
+                                    service delivery, tailored to meet your unique business needs... </p>
+
+                                <a href="more-pragathi.html"
+                                    class="text-uppercase alt-font text-extra-dark-gray font-weight-800 text-extra-small">Click
+                                    & More Details <i
+                                        class="fas fa-long-arrow-alt-right margin-5px-left text-deep-pink text-medium position-relative top-2"
+                                        aria-hidden="true"></i></a>
+
+                                <span
+                                    class="separator-line-horrizontal-medium-light2 bg-deep-pink d-inline-block margin-40px-top sm-margin-20px-top"></span>
+                            </div>
+                        </div>
+                        <div class="w-100 d-table position-relative cover-background small-screen sm-height-300px"
+                            style="background: url(/static/images/img/img-02.jpg)"></div>
+                    </div>
+                </div>
+                <!-- end information item -->
+                <!-- start information item -->
+                <div class="col-12 col-lg-4 p-0 image-hover-style-3 h-100 last-paragraph-no-margin bg-light-gray">
+                    <div class="feature-box-wrap">
+                        <div class="w-100 d-table position-relative cover-background small-screen sm-height-300px"
+                            style="background: url(/static/images/img/img-03.jpg)"></div>
+                        <div class="w-100 small-screen sm-height-300px d-table arrow-top">
+                            <div
+                                class="d-table-cell align-middle padding-eighteen-lr lg-padding-twelve-lr text-center md-padding-ten-lr sm-padding-seven-all">
+                                <h6
+                                    class="text-extra-dark-gray alt-font width-95 mx-auto md-width-100 sm-margin-15px-bottom">
+                                    We Craft Beautiful & Unique Digital Experiences</h6>
+                                <p
+                                    class="no-letter-spacing padding-two-lr line-height-26 sm-line-height-20 sm-no-padding-lr text-justify">
+                                    At Pragathi IT Ads Pvt Ltd, we craft beautiful and unique digital experiences
+                                    tailored to your brand's needs. Our team of creative experts blends innovative
+                                    design with cutting-edge technology to deliver stunning digital solutions. From
+                                    captivating websites and engaging mobile apps to impactful...</p>
+
+                                <a href="more-pragathi.html"
+                                    class="text-uppercase alt-font text-extra-dark-gray font-weight-800 text-extra-small">Click
+                                    & More Details <i
+                                        class="fas fa-long-arrow-alt-right margin-5px-left text-deep-pink text-medium position-relative top-2"
+                                        aria-hidden="true"></i></a>
+
+                                <span
+                                    class="separator-line-horrizontal-medium-light2 bg-deep-pink d-inline-block margin-40px-top sm-margin-20px-top"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end information item -->
+            </div>
+        </div>
+    </section>
+    <!-- end information section -->
+    <!-- start progress steps section -->
+    <section class="wow fadeIn">
+        <div class="container text-center">
+            <div class="row">
+                <!-- start process step item -->
+                <div
+                    class="col-12 col-md-4 text-center feature-box-10 sm-margin-20px-bottom wow fadeInUp last-paragraph-no-margin">
+                    <div
+                        class="d-inline-block padding-five-all sm-padding-15px-all sm-no-margin-bottom margin-10px-bottom">
+                        <span
+                            class="number alt-font border-width-2 border-all border-color-deep-pink rounded-circle letter-spacing-minus-1 text-extra-dark-gray">01</span>
+                    </div>
+                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+                        Discussion of the Idea</div>
+                    <p class="width-75 md-width-85 sm-width-100 mx-auto">Pragathi IT offers cutting-edge solutions to
+                        streamline your business operations. Let's discuss how our innovative technology can drive
+                        efficiency and growth for your company. Join us for an in-depth conversation to explore tailored
+                        IT strategies that meet your unique needs and propel your business forward.</p>
+                </div>
+                <!-- end process step item -->
+                <!-- start process step item -->
+                <div class="col-12 col-md-4 text-center feature-box-10 sm-margin-20px-bottom wow fadeInUp last-paragraph-no-margin"
+                    data-wow-delay="0.2s">
+                    <div
+                        class="d-inline-block padding-five-all sm-padding-15px-all sm-no-margin-bottom margin-10px-bottom">
+                        <span
+                            class="number number-center alt-font border-width-2 border-all border-color-deep-pink rounded-circle letter-spacing-minus-1 text-extra-dark-gray">02</span>
+                    </div>
+                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+                        Prepare design & execute</div>
+                    <p class="width-75 md-width-85 sm-width-100 mx-auto">Pragathi IT specializes in preparing,
+                        designing, and executing innovative IT solutions tailored to your business needs. Our expert
+                        team ensures seamless integration and optimal performance. Partner with us to transform your IT
+                        infrastructure and drive your company's success with cutting-edge technology and strategic
+                        implementation.</p>
+                </div>
+                <!-- end process step item -->
+                <!-- start process step item -->
+                <div class="col-12 col-md-4 text-center feature-box-10 wow fadeInUp last-paragraph-no-margin"
+                    data-wow-delay="0.4s">
+                    <div
+                        class="d-inline-block padding-five-all sm-padding-15px-all sm-no-margin-bottom margin-10px-bottom">
+                        <span
+                            class="number alt-font border-width-2 border-all border-color-deep-pink rounded-circle letter-spacing-minus-1 text-extra-dark-gray">03</span>
+                    </div>
+                    <div class="alt-font text-medium text-extra-dark-gray margin-10px-bottom md-margin-5px-bottom">
+                        Finalize product & launch</div>
+                    <p class="width-75 md-width-85 sm-width-100 mx-auto">Pragathi IT excels in finalizing and launching
+                        top-tier IT products. Our dedicated team ensures every detail is perfected for a successful
+                        market introduction. Partner with us to bring your innovative ideas to life and achieve a
+                        smooth, impactful product launch that drives your business forward.</p>
+                </div>
+                <!-- end process step item -->
+            </div>
+        </div>
+    </section>
+    <!-- end progress steps section -->
+    <!-- start parallax testimonial section -->
+    <section class="parallax wow fadeIn" data-stellar-background-ratio="0.5"
+        style="background-image: url('/static/images/img/cus.jpg')">
+        <div class="opacity-medium bg-extra-dark-gray"></div>
+        <div class="container">
+            <div class="row">
+                <div class="swiper-slider-second swiper-container white-move">
+                    <div class="swiper-wrapper">
+                        <!-- start testimonial slide item -->
+                        <div class="swiper-slide">
+                            <div class="row justify-content-center m-0">
+                                <div class="col-12 col-lg-7 col-md-10">
+                                    <div
+                                        class="media d-block d-md-flex text-center text-md-left align-items-center padding-30px-lr lg-padding-15px-lr width-100">
+                                        <img src="/static/images/img/face2.jpg" alt=""
+                                            class="rounded-circle width-130px margin-50px-right lg-width-100px md-width-120px sm-width-100px sm-no-margin-right sm-margin-15px-bottom" />
+                                        <div class="media-body last-paragraph-no-margin">
+                                            <p class="text-extra-light-gray">Our partnership with Pragati Ads is
+                                                invaluable. Their strategic insights and creative campaigns have
+                                                significantly increased our brand reach and customer engagement. We have
+                                                seen measurable growth and are impressed with their commitment to
+                                                deliver results</p>
+                                            <span
+                                                class="text-white-2 alt-font d-inline-block text-uppercase text-small margin-15px-top">-
+                                                Joseph Alex</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- start testimonial slide item -->
+                        <div class="swiper-slide">
+                            <div class="row justify-content-center m-0">
+                                <div class="col-12 col-lg-7 col-md-10">
+                                    <div
+                                        class="media d-block d-md-flex text-center text-md-left align-items-center padding-30px-lr lg-padding-15px-lr width-100">
+                                        <img src="/static/images/img/face1.jpg" alt=""
+                                            class="rounded-circle width-130px margin-50px-right lg-width-100px md-width-120px sm-width-100px sm-no-margin-right sm-margin-15px-bottom" />
+                                        <div class="media-body last-paragraph-no-margin">
+                                            <p class="text-extra-light-gray">Working with Pragati It Ads has been a game
+                                                changer for us. Their strategic approach and creativity really enhanced
+                                                our brand presence. We saw a marked increase in engagement and brand
+                                                recognition after partnering with them. Highly recommended...!</p>
+                                            <span
+                                                class="text-white-2 alt-font d-inline-block text-uppercase text-small margin-15px-top">-
+                                                Rajesh Murali</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end testimonial slide item -->
+                        <!-- start testimonial slide item -->
+                        <div class="swiper-slide">
+                            <div class="row justify-content-center m-0">
+                                <div class="col-12 col-lg-7 col-md-10">
+                                    <div
+                                        class="media d-block d-md-flex text-center text-md-left align-items-center padding-30px-lr lg-padding-15px-lr width-100">
+                                        <img src="/static/images/img/face3.jpg" alt=""
+                                            class="rounded-circle width-130px margin-50px-right lg-width-100px md-width-120px sm-width-100px sm-no-margin-right sm-margin-15px-bottom" />
+                                        <div class="media-body last-paragraph-no-margin">
+                                            <p class="text-extra-light-gray">Our experience with this company has been
+                                                excellent. They have consistently provided innovative strategies that
+                                                have not only increased our visibility but also yielded tangible
+                                                results. Their team's expertise and proactive approach make them a
+                                                valuable partner for any business looking to thrive in a competitive
+                                                landscape.</p>
+                                            <span
+                                                class="text-white-2 alt-font text-uppercase text-small margin-15px-top d-inline-block">-
+                                                Anitha Menon</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end testimonial slide item -->
+                    </div>
+                    <div class="swiper-pagination d-none"></div>
+                    <div class="swiper-button-next slider-long-arrow-white"></div>
+                    <div class="swiper-button-prev slider-long-arrow-white"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end parallax testimonial section -->
+
+    <!-- start answer section -->
+    <section class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h6 class="text-uppercase alt-font text-extra-dark-gray font-weight-600 margin-four-bottom">About
+                        Pragathi Group of Institutions </h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- start accordion -->
+                    <div class="panel-group accordion-style1" id="accordion-one">
+                        <!-- start accordion item -->
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion-one" href="#accordion-one-link1"
+                                    class="collapsed" aria-expanded="false">
+                                    <div
+                                        class="panel-title font-weight-500 text-uppercase position-relative padding-20px-right">
+                                        Pragathi Group of Institutions Establishment<span
+                                            class="position-absolute right-0 top-0"><i class="ti-plus"></i></span></div>
+                                </a>
+                            </div>
+                            <div id="accordion-one-link1" data-parent="#accordion-one" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Pragathi Group of Institutions was <strong>established in 1986</strong> under
+                                        SHREE KANTEERAVA PRAGATHI VIDYA SAMSTHE, holding Registration No. S No.
+                                        254/85-86, registered under the Karnataka Societies <strong>Registration Act
+                                            No.17 of 1960</strong>. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end accordion item -->
+                        <!-- start accordion item -->
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion-one" href="#accordion-one-link2"
+                                    class="collapsed" aria-expanded="false">
+                                    <div
+                                        class="panel-title font-weight-500 text-uppercase position-relative padding-20px-right">
+                                        About Pragathi IT Ads<span class="position-absolute right-0 top-0"><i
+                                                class="ti-plus"></i></span></div>
+                                </a>
+                            </div>
+                            <div id="accordion-one-link2" data-parent="#accordion-one" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Pragathi Group of Institutions is committed to shaping students' futures in both
+                                        their education and skill development. The institution boasts numerous case
+                                        studies of nurturing average students into successful individuals through
+                                        education and skill development initiatives. There is a strong emphasis on
+                                        academic excellence while also focusing on holistic student development.
+                                        Continuously identifying ways to enhance the university stipulated curriculum,
+                                        the college integrates a balanced mix of curricular and co-curricular
+                                        activities.</p>
+
+                                    <p>The institution aims to cultivate self-reliant, independent thinkers who are
+                                        globally relevant, skilled, and socially responsible citizens. Students are
+                                        encouraged to contribute to society while upholding core values. At the campus,
+                                        students enjoy freedom alongside responsibility and discipline. The college's
+                                        research team endeavors to understand students' interests, and experts work
+                                        alongside academic subjects to develop students' practical skills, enabling them
+                                        to engage in part-time work while studying. This approach not only enhances
+                                        students' working attitudes but also fosters entrepreneurial spirit. Pragathi
+                                        College offers quality education at an affordable fee, with a curriculum infused
+                                        with pro-community practices. The institution's co-educational environment
+                                        provides additional advantages.</p>
+
+                                    <p>Student involvement is integral to the college's operations, extending to
+                                        community service, extracurricular activities, and maintaining an academic
+                                        atmosphere. The unwavering support of parents and the public has been crucial to
+                                        the college's success. Scholars, experts, and prominent figures regularly visit
+                                        the campus, offering guidance and motivation. Various sectors, including
+                                        corporate, service, and socio-cultural institutions, seek to recruit students
+                                        from the college. The staff prioritize identifying and nurturing leadership at
+                                        all levels, fostering a comprehensive perspective. A healthy academic
+                                        relationship between faculty and students ensures optimal learning outcomes. The
+                                        institution's commitment to preserving the joy of learning, supported by strong
+                                        management and interdepartmental coordination, is a source of pride.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end accordion item -->
+                        <!-- start accordion item -->
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion-one" href="#accordion-one-link3"
+                                    class="collapsed" aria-expanded="false">
+                                    <div
+                                        class="panel-title font-weight-500 text-uppercase position-relative padding-20px-right">
+                                        Self-Reliant<span class="position-absolute right-0 top-0"><i
+                                                class="ti-plus"></i></span></div>
+                                </a>
+                            </div>
+                            <div id="accordion-one-link3" data-parent="#accordion-one" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>The institution cultivates self-reliant, independently-thinking individuals who
+                                        are globally relevant, skilled, and socially responsible citizens. These
+                                        students are instilled with values that enable them to contribute meaningfully
+                                        to society in their own capacity.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end accordion item -->
+                        <!-- start accordion item -->
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion-one" href="#accordion-one-link4"
+                                    class="collapsed" aria-expanded="false">
+                                    <div
+                                        class="panel-title font-weight-500 text-uppercase position-relative padding-20px-right">
+                                        Responsibility and Discipline<span class="position-absolute right-0 top-0"><i
+                                                class="ti-plus"></i></span></div>
+                                </a>
+                            </div>
+                            <div id="accordion-one-link4" data-parent="#accordion-one" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Students on campus are afforded appropriate freedom, balanced with a sense of
+                                        responsibility and discipline. The college's research team endeavours to
+                                        understand students' interests and, in collaboration with academic subjects,
+                                        experts help develop their practical skills, enabling part-time work while
+                                        studying. This approach not only fosters students' work ethic alongside their
+                                        academic pursuits but also encourages research initiatives that challenge
+                                        conventional life and knowledge concepts through innovative and lateral
+                                        thinking. Entrepreneurial activities are also encouraged. Pragathi College
+                                        provides quality education at an affordable fee, with a curriculum integrated
+                                        with pro-community practices. The institution's commitment to co-education has
+                                        proven advantageous.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end accordion item -->
+                        <!-- start accordion item -->
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#accordion-one" href="#accordion-one-link5"
+                                    class="collapsed" aria-expanded="false">
+                                    <div
+                                        class="panel-title font-weight-500 text-uppercase position-relative padding-20px-right">
+                                        Student involvement<span class="position-absolute right-0 top-0"><i
+                                                class="ti-plus"></i></span></div>
+                                </a>
+                            </div>
+                            <div id="accordion-one-link5" data-parent="#accordion-one" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Student involvement is integral to the college's operations, extending to
+                                        extension activities, community services, and the maintenance of an academic
+                                        environment. The college greatly values the support of parents and the public,
+                                        which has been instrumental in its functioning. Visitors, including scholars,
+                                        veterans, experts, and prominent citizens, provide valuable suggestions and
+                                        motivation. The corporate sector, service industry, and socio-cultural
+                                        institutions actively seek students from the college for employment
+                                        opportunities. Staff members prioritize identifying and nurturing leadership at
+                                        various levels, fostering a comprehensive perspective. A healthy academic
+                                        relationship between faculty and students has significantly enhanced and secured
+                                        learning outcomes. The institution's dedication to maintaining and nurturing the
+                                        joy of learning has been beneficial. Immense support from management and
+                                        effective interdepartmental coordination contribute to the institution's pride.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end accordion item -->
+                    </div>
+                    <!-- end accordion -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end answer section -->
+
+    <!-- start call to action -->
+    <section class="half-section wow fadeIn cover-background"
+        style="background-image: url('/static/images/img/cus1.jpg');">
+        <div class="opacity-medium bg-extra-dark-gray"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 position-relative text-center">
+                    <span
+                        class="text-extra-large text-white-2 alt-font d-inline-block margin-5px-top margin-30px-right sm-no-margin-right sm-no-margin-top sm-margin-15px-bottom sm-width-100">Download
+                        Pragathi IT Ad's Company Profile pdf. File</span>
+                    <a href="/static/images/img/pragathi-profile.pdf" target="new"
+                        class="btn btn-white btn-small align-top sm-no-margin-right">Download Detailed Profile</a> <a
+                        href="/static/images/img/Pragathi-Small Profile.pdf" target="new"
+                        class="btn btn-white btn-small align-top sm-no-margin-right">Download Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end call to action -->
+
+    <footer class="footer-standard">
+        <div class="footer-widget-area padding-five-tb sm-padding-30px-tb">
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-lg-3 col-md-6 widget border-right border-color-extra-light-gray md-no-border-right md-margin-30px-bottom text-center text-md-left">
+                        <!-- start logo -->
+                        <a href="index.html" class="margin-20px-bottom d-inline-block"><img class="footer-logo"
+                                src="/static/images/logo-bottom.png" data-rjs="/static/images/logo-bottom.png"
+                                alt="Pragathi"></a>
+                        <!-- end logo -->
+                        <p class="text-small width-95 sm-width-100">Pragathi IT Ads Pvt. Ltd established with view of
+                            providing one stop solution for Branding , Advertising and IT Services.</p>
+
+                        <div class="row justify-content-center">
+                            <div class="col-10 col-lg-12 text-center elements-social social-icon-style-1">
+                                <ul class="extra-small-icon -icon">
+                                    <li><a class="facebook" href="https://www.facebook.com/pragathiitads"
+                                            target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a class="instagram" href="https://www.instagram.com/pragathiitads/"
+                                            target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a class="twitter" href="https://x.com/pragathiitads" target="_blank"><i
+                                                class="fab fa-twitter"></i></a></li>
+                                    <li><a class="linkedin" href="https://www.linkedin.com/company/pragathi-itads"
+                                            target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a class="youtube" href="https://www.youtube.com/@pragathiitads"
+                                            target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a class="whatsapp"
+                                            href="https://api.whatsapp.com/send?phone=918861215361&amp;text="
+                                            target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- start social media -->
+                        <!-- end social media -->
+                    </div>
+                    <!-- start additional links -->
+                    <!-- start additional links -->
+                    <div
+                        class="col-lg-3 col-md-6 widget border-right border-color-extra-light-gray padding-45px-left md-padding-15px-left md-no-border-right md-margin-30px-bottom text-center text-md-left">
+                        <div
+                            class="widget-title alt-font text-small text-extra-dark-gray text-uppercase margin-10px-bottom font-weight-600">
+                            Pragathi Links</div>
+                        <ul class="list-unstyled">
+                            <li><a class="text-small" href="about-us.html">About Us</a></li>
+                            <li><a class="text-small" href="our-vision-mission.html">Vision &amp; Mission</a></li>
+                            <li><a class="text-small" href="our-management.html">Our Management</a></li>
+                            <li><a class="text-small" href="our-clients.html">Our Clients</a></li>
+                            <li><a class="text-small" href="career-us.html">Career Us</a></li>
+                            <li><a class="text-small" href="/static/images/img/pragathi-profile.pdf">Download
+                                    Profile</a></li>
+                            <li><a class="text-small" href="branding.html">Our Services</a></li>
+                            <li><a class="text-small" href="gallery.html">Gallery</a></li>
+                            <li><a class="text-small" href="contact-us.html">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- end additional links -->
+                    <!-- end additional links -->
+                    <!-- start contact information -->
+                    <div
+                        class="col-lg-3 col-md-6 widget border-right border-color-extra-light-gray padding-45px-left md-padding-15px-left sm-clear-both md-no-border-right sm-margin-30px-bottom text-center text-md-left">
+                        <div
+                            class="widget-title alt-font text-small text-extra-dark-gray text-uppercase margin-10px-bottom font-weight-600">
+                            Contact Info</div>
+                        <p class="text-small d-inline-block d-md-block margin-15px-bottom width-80 md-width-70">#57
+                            Hessaragatta Main Road, Chikka Banavara, Opp: Janapriya Apartment Bangalore 560090</p>
+                        <div class="text-small">Email: <a
+                                href="mailto:info@pragathiitads.com">info@pragathiitads.com</a></div>
+                        <div class="text-small">Phone: +91 88612 15361</div>
+                        <div class="text-small">Phone: +91 88612 15361</div>
+                        <br>
+                        <div
+                            class="widget-title alt-font text-small text-extra-dark-gray text-uppercase margin-10px-bottom font-weight-600">
+                            Office Timiing</div>
+
+                        <p class="text-small d-inline-block d-md-block margin-15px-bottom width-80 md-width-70">Mon to
+                            Sat: 09:00 AM to 06:00 PM Sunday Holiday</p>
+
+                        <div
+                            class="widget-title alt-font text-small text-extra-dark-gray text-uppercase margin-10px-bottom font-weight-600">
+                            Location Map</div>
+
+                        <a href="https://maps.app.goo.gl/XtMGY8po2Lt1ynWb7" target="new"
+                            class="text-small text-uppercase text-decoration-underline">View Direction</a>
+                    </div>
+                    <!-- end contact information -->
+                    <!-- start instagram -->
+                    <div
+                        class="col-lg-3 col-md-6 widget padding-45px-left md-padding-15px-left text-center text-md-left">
+                        <div
+                            class="widget-title alt-font text-small text-extra-dark-gray text-uppercase margin-20px-bottom font-weight-600">
+                            Resent portfolio</div>
+                        <div class="instagram-follow-api">
+                            <ul id="instaFeed-footer">
+                                <div class="col-12"><span class="text-center">No Images Found</span></div>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end instagram -->
+                </div>
+            </div>
+        </div>
+        <div class="bg-light-gray padding-50px-tb text-center sm-padding-30px-tb">
+            <div class="container">
+                <div class="row">
+                    <!-- start copyright -->
+                    <div class="col-md-6 text-center text-md-left text-small">© Copyright 2024 Pragathi IT Ads Pvt. Ltd,
+                        All Rights Reserved. Design by <a href="#" target="_blank" class="text-dark-gray">Pragathi IT
+                            Ads </a></div>
+                    <div class="col-md-6 text-center text-md-right text-small">
+                        <a href="term-condition.html" class="text-dark-gray">Term and
+                            Condition</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy,html"
+                            class="text-dark-gray">Privacy Policy</a>
+                    </div>
+                    <!-- end copyright -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- start scroll to top -->
+    <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
+    <!-- end scroll to top -->
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/js/modernizr.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/static/js/skrollr.min.js"></script>
+    <script type="text/javascript" src="/static/js/smooth-scroll.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.appear.js"></script>
+    <!-- menu navigation -->
+    <script type="text/javascript" src="/static/js/bootsnav.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.nav.js"></script>
+    <!-- animation -->
+    <script type="text/javascript" src="/static/js/wow.min.js"></script>
+    <!-- page scroll -->
+    <script type="text/javascript" src="/static/js/page-scroll.js"></script>
+    <!-- swiper carousel -->
+    <script type="text/javascript" src="/static/js/swiper.min.js"></script>
+    <!-- counter -->
+    <script type="text/javascript" src="/static/js/jquery.count-to.js"></script>
+    <!-- parallax -->
+    <script type="text/javascript" src="/static/js/jquery.stellar.js"></script>
+    <!-- magnific popup -->
+    <script type="text/javascript" src="/static/js/jquery.magnific-popup.min.js"></script>
+    <!-- portfolio with shorting tab -->
+    <script type="text/javascript" src="/static/js/isotope.pkgd.min.js"></script>
+    <!-- images loaded -->
+    <script type="text/javascript" src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <!-- pull menu -->
+    <script type="text/javascript" src="/static/js/classie.js"></script>
+    <script type="text/javascript" src="/static/js/hamburger-menu.js"></script>
+    <!-- counter -->
+    <script type="text/javascript" src="/static/js/counter.js"></script>
+    <!-- fit video -->
+    <script type="text/javascript" src="/static/js/jquery.fitvids.js"></script>
+
+    <!-- skill bars -->
+    <script type="text/javascript" src="/static/js/skill.bars.jquery.js"></script>
+    <!-- justified gallery -->
+    <script type="text/javascript" src="/static/js/justified-gallery.min.js"></script>
+    <!--pie chart-->
+    <script type="text/javascript" src="/static/js/jquery.easypiechart.min.js"></script>
+    <!-- retina -->
+    <script type="text/javascript" src="/static/js/retina.min.js"></script>
+    <!-- revolution -->
+    <script type="text/javascript" src="/static/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="/static/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <script type="text/javascript" src="/static/js/csd.js"></script>
+    <script>
+        // ========== CSRF Token Handler ==========
+        function getCookie(name) {
+            const cookies = document.cookie ? document.cookie.split(';') : [];
+            for (let cookie of cookies) {
+                cookie = cookie.trim();
+                if (cookie.startsWith(name + '=')) {
+                    return decodeURIComponent(cookie.slice(name.length + 1));
+                }
+            }
+            return null;
+        }
+
+        const csrftoken = getCookie('csrftoken');
+
+        // ========== Popup Initialization ==========
+        window.addEventListener('DOMContentLoaded', () => {
+            ['workEnquiryForm', 'franchiseEnquiryForm'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
+        });
+
+        // ========== Show / Hide Popup ==========
+        function showPopup(formId) {
+            ['workEnquiryForm', 'franchiseEnquiryForm'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = (id === formId) ? 'block' : 'none';
+            });
+            document.querySelector('.left-static-buttons').style.display = 'none';
+        }
+
+        function closePopup(formId) {
+            const formEl = document.getElementById(formId);
+            if (formEl) formEl.style.display = 'none';
+            document.querySelector('.left-static-buttons').style.display = 'flex';
+        }
+
+        // ========== Thank You Popup ==========
+        function showThankYouPopup() {
+            const thankYouPopup = document.getElementById('thankYouPopup');
+            if (!thankYouPopup) return;
+
+            thankYouPopup.style.display = 'block';
+            setTimeout(() => {
+                thankYouPopup.style.opacity = '1';
+            }, 10);
+
+            setTimeout(() => {
+                thankYouPopup.style.opacity = '0';
+                setTimeout(() => {
+                    thankYouPopup.style.display = 'none';
+                }, 500);
+            }, 5000);
+        }
+
+        // ========== Form Submission Helper ==========
+        function handleFormSubmit(e, url, formIdToClose) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrftoken,
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(formData)
+            })
+                .then(response => {
+                    if (!response.ok) throw new Error("Network response was not ok");
+                    return response.json();
+                })
+                .then(data => {
+                    showThankYouPopup();
+                    closePopup(formIdToClose);
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error("Error submitting form:", error);
+                    alert("Something went wrong. Please try again.");
+                });
+        }
+
+        // ========== Attach Event Listeners ==========
+        const franchiseForm = document.getElementById('franchiseForm');
+        if (franchiseForm) {
+            franchiseForm.addEventListener('submit', (e) => {
+                handleFormSubmit(e, '/api/franchise-inquiries/submit/', 'franchiseEnquiryForm');
+            });
+        }
+
+        const workInquiryForm = document.getElementById('workInquiryForm');
+        if (workInquiryForm) {
+            workInquiryForm.addEventListener('submit', (e) => {
+                handleFormSubmit(e, '/api/work-inquiries/submit/', 'workEnquiryForm');
+            });
+        }
+    </script>
+
+
+
+</body>
+
+</html>
